@@ -15,7 +15,7 @@ class Smallestinteger {
 		
 		solution(D);
 		solution(C);
-		
+		solution(B);
 	}
 	
 	public static int solution(int[] A) {
@@ -31,7 +31,7 @@ class Smallestinteger {
 		  // A= new int [N];
 		   Arrays.sort(A); 
 		   
-		   int [] positiveA= new int [10];
+		   int [] positiveA= new int [A.length];
 		   
 		   for(int i=0; i<A.length; i++) {
 				//System.out.println("What's the "+  (A[i]+1) +" number?" );
@@ -45,8 +45,26 @@ class Smallestinteger {
 		   }
 		   for(int number:positiveA) {
 				System.out.println("Positive array numbers: "+ number);
+				
 		   }
-		  
+			for(int i=0; i<positiveA.length-1;i++){
+				
+				if (positiveA[i]<=positiveA[i+1]){
+					if(!((positiveA[i+1]-positiveA[i])==1 || (positiveA[i+1]-positiveA[i])==0)){
+						x=positiveA[i]+1;
+						System.out.println("The smallest missing integer is "+ x);
+						
+					}
+					
+					//	System.out.println("There is no smallest missing integer.");
+						//continue;
+					//}
+			
+				}else if (((positiveA[i]<positiveA[i+1])&&((positiveA[i+1]-positiveA[i])==1))){
+					System.out.println("There is no smallest missing integer.");
+					
+				}
+			}
 		   
 		   // for(int number:A) {
 			   
