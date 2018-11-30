@@ -60,10 +60,13 @@ class Smallestinteger {
 						//continue;
 					//}
 			
-				}else if (((positiveA[i]<positiveA[i+1])&&((positiveA[i+1]-positiveA[i])==1))){
-					System.out.println("There is no smallest missing integer.");
+				}//else if (((positiveA[i]<positiveA[i+1])&&((positiveA[i+1]-positiveA[i])==1))){
+					//System.out.println("There is no smallest missing integer.");
 					
-				}
+				//}
+			}
+			if (x==0) {
+				System.out.println("There is no smallest missing integer.");
 			}
 		   
 		   // for(int number:A) {
